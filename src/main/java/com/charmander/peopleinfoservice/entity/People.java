@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 
 @Table
-public class Person {
+public class People {
 
     @Id
     @GeneratedValue
