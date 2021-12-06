@@ -1,11 +1,11 @@
 package com.charmander.peopleinfoservice.repository;
 
-import com.charmander.peopleinfoservice.entity.People;
+import com.charmander.peopleinfoservice.entity.Person;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PersonRepository extends CrudRepository  <People, Long> {
+public interface PersonRepository extends CrudRepository  <Person, Long> {
 
 
 }

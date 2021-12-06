@@ -1,6 +1,6 @@
 package com.charmander.peopleinfoservice.controller;
 
-import com.charmander.peopleinfoservice.entity.People;
+import com.charmander.peopleinfoservice.entity.Person;
 import com.charmander.peopleinfoservice.service.PersonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ private final PersonService personService;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
-    public People savePerson (@RequestBody People people) {
-        return personService.save(people);
+    public Person savePerson (@RequestBody Person person) {
+        return personService.save(person);
     }
 }

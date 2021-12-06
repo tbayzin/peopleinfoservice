@@ -15,11 +15,13 @@ import javax.persistence.Table;
 
 
 @Table
-public class People {
+public class Person {
 
     @Id
     @GeneratedValue
     private Long id;
+
+    private int tckn;
     private String name;
     private String surname;
     private String city;
