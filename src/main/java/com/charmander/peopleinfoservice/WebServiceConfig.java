@@ -24,19 +24,19 @@ import org.springframework.xml.xsd.XsdSchema;
             return new ServletRegistrationBean<>(servlet, "/ws/*");
         }
 
-        @Bean(name = "people")
+        @Bean(name = "peoplesoap")
         public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
             DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-            wsdl11Definition.setPortTypeName("PeoplePort");
+            wsdl11Definition.setPortTypeName("PeoplesoapPort");
             wsdl11Definition.setLocationUri("/ws");
-            wsdl11Definition.setTargetNamespace("http://spring.io/guides/gs-producing-web-service");
+            wsdl11Definition.setTargetNamespace("http://www.github.com/tbayzin/peopleinfoservice");
             wsdl11Definition.setSchema(countriesSchema);
             return wsdl11Definition;
         }
 
         @Bean
-        public XsdSchema peopleSchema() {
-            return new SimpleXsdSchema(new ClassPathResource("person.xsd"));
+        public XsdSchema peoplesoapSchema() {
+            return new SimpleXsdSchema(new ClassPathResource("personsoap.xsd"));
         }
     }
 

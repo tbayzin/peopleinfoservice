@@ -70,7 +70,7 @@
 	</executions>
 	<configuration>
 		<sources>
-			<source>${project.basedir}/src/main/resources/person.xsd</source>
+			<source>${project.basedir}/src/main/resources/personsoap.xsd</source>
 		</sources>
 	</configuration>
 </plugin>
