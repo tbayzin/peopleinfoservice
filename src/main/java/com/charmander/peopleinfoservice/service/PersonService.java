@@ -14,4 +14,8 @@ public class PersonService {
         return personRepository.save(person);
     }
 
+    public Person getPersonByTckn(Integer tckn) {    return personRepository.getPersonByTckn(tckn);     }
+
+
+
 }

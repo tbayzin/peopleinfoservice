@@ -33,17 +33,12 @@ private static final Map<Integer, Personsoap> people = new HashMap<>();
 		people.put(haci.getTckn(),haci);
 
 
-
 	}
 
-
-	public com.github.tbayzin.peopleinfoservice.Personsoap findPersonsoap(int tckn) {
+	public Personsoap findPersonsoap(int tckn) {
 		Assert.notNull(tckn, "Kişi tckn numarası boş olamaz");
 		return people.get(tckn);
 	}
-
-
-
 
 
 }
