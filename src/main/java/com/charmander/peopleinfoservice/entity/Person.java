@@ -26,4 +26,12 @@ public class Person {
     private String surname;
     private String city;
 
+    private MarriageStatus status;
+    public enum MarriageStatus {
+        Married,
+        Single,
+        Divorced;
+    }
+    
+
 }
