@@ -6,6 +6,7 @@ import com.charmander.peopleinfoservice.service.PersonService;
 import com.github.tbayzin.peopleinfoservice.GetPersonsoapRequest;
 import com.github.tbayzin.peopleinfoservice.GetPersonsoapResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,17 +16,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/people")
 public class PersonController {
 
+    @Autowired
     private  final PersonEndpoint personEndpoint;
 private final PersonService personService;
 
 
-
-
 // Buraya bir GET mapping yazılacak  buraya attığın tckn soapdaki tckn sorgulayan endpointe gidecek o da dummy data & db ye gidecek
 
-
-    @GetMapping()
-    public GetPersonsoapResponse getPersonsoapByTckn (@RequestParam GetPersonsoapRequest request) {
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "/findperson")
+    public GetPersonsoapResponse getPersonsoapByTckn (@RequestBody GetPersonsoapRequest request) {
         return personEndpoint.getPerson(request);
     }
 

@@ -26,10 +26,10 @@ private static final Map<Integer, Personsoap> people = new HashMap<>();
 		people.put(esref.getTckn(),esref);
 
 		Personsoap haci = new Personsoap();
-		esref.setName("Hacı");
-		esref.setSurname("Hüsrev");
-		esref.setCity("İstanbul");
-		esref.setTckn(21599025);
+		haci.setName("Hacı");
+		haci.setSurname("Hüsrev");
+		haci.setCity("İstanbul");
+		haci.setTckn(21599025);
 		people.put(haci.getTckn(),haci);
 
 
