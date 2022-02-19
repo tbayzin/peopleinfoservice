@@ -25,6 +25,7 @@ public class Person {
     private String name;
     private String surname;
     private String city;
+    private String religion;
 
     private MarriageStatus status;
     public enum MarriageStatus {
