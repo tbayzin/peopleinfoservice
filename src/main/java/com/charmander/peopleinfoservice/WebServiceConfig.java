@@ -36,7 +36,7 @@ import org.springframework.xml.xsd.XsdSchema;
 
         @Bean
         public XsdSchema peoplesoapSchema() {
-            return new SimpleXsdSchema(new ClassPathResource("personsoap.xsd"));
+            return new SimpleXsdSchema(new ClassPathResource("peoplesoap.xsd"));
         }
     }
 
